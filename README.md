@@ -1,2 +1,2 @@
 # Javascript-1st-course
-JS
+JS for beginner
