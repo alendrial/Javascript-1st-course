@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    'use strict';
+    /*
+    Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+переданного значения операции (использовать switch) выполнить одну из арифметических операций
+(использовать функции из задания 4) и вернуть полученное значение.
+    */
+   // summa
+   function sumNumber(a, b) {
+        return a + b;
+    }
+    
+    // raznost
+    function diffNumber(a, b) {
+        return a - b;
+    }
+    
+    // delenie
+    function divNumber(a, b) {
+        return a / b;
+    }
+    
+    //umnojenie
+    function multNumber(a, b) {
+        return a * b;
+    }
+    
+
+
+    //done!!!
+    function mathOperation(a, b, operation) {
+        switch (operation) {
+        case sumNumber:
+            alert(sumNumber(a, b));
+            break;
+        case diffNumber:
+            alert(diffNumber(a, b));
+            break;
+        case divNumber:
+            alert(divNumber(a, b));
+            break;
+        case multNumber:
+            alert(multNumber(a, b));
+            break;
+        default:
+            alert('undifined');
+        }
+    }
+    mathOperation(4,2, multNumber);
+    
+        </script>
+
+
+</body>
+</html>
