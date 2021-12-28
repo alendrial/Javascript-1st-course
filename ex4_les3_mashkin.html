@@ -47,9 +47,15 @@ const products = [
     console.log(objectsLowToHigh);
     //более сложный вариант
     function compareNumeric(object1, object2) {
-  if (object1.price > object2.price) return 1;
-  if (object1.price == object2.price) return 0;
-  if (object1.price < object2.price) return -1;
+  if (object1.price > object2.price) {
+      return 1;
+    }
+  if (object1.price == object2.price) {
+      return 0;
+  }
+  if (object1.price < object2.price) {
+      return -1;
+  }
 }
 
 let LowToHigh = products.sort(compareNumeric);
