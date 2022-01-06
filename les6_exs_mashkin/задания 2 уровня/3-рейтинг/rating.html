@@ -40,6 +40,86 @@
         let goldenClass = 'golden';
 
         // в процессе
+        firstStar.addEventListener('mouseover', function() {
+            if (!firstStar.classList.contains(goldenClass)) {
+            firstStar.classList.add(goldenClass);
+            }
+        });
+        
+        firstStar.addEventListener('mouseout', function (){
+            if (firstStar.classList.contains(goldenClass)) {
+                firstStar.classList.remove(goldenClass);
+            }
+        })
+
+        secondStar.addEventListener('mouseover', function() {
+            if (!firstStar.classList.contains(goldenClass)) {
+            firstStar.classList.add(goldenClass);
+            secondStar.classList.add(goldenClass);
+            }
+        });
+        
+        secondStar.addEventListener('mouseout', function (){
+            if (firstStar.classList.contains(goldenClass)) {
+                firstStar.classList.remove(goldenClass);
+                secondStar.classList.remove(goldenClass);
+            }
+        })
+        thirdStar.addEventListener('mouseover', function() {
+            if (!firstStar.classList.contains(goldenClass)) {
+            firstStar.classList.add(goldenClass);
+            secondStar.classList.add(goldenClass);
+            thirdStar.classList.add(goldenClass);
+            }
+        });
+        
+        thirdStar.addEventListener('mouseout', function (){
+            if (firstStar.classList.contains(goldenClass)) {
+                firstStar.classList.remove(goldenClass);
+                secondStar.classList.remove(goldenClass);
+                thirdStar.classList.remove(goldenClass);
+            }
+        })
+        fourthStar.addEventListener('mouseover', function() {
+            if (!firstStar.classList.contains(goldenClass)) {
+            firstStar.classList.add(goldenClass);
+            secondStar.classList.add(goldenClass);
+            thirdStar.classList.add(goldenClass);
+            fourthStar.classList.add(goldenClass);
+            }
+        });
+        
+        fourthStar.addEventListener('mouseout', function (){
+            if (firstStar.classList.contains(goldenClass)) {
+            firstStar.classList.remove(goldenClass);
+            secondStar.classList.remove(goldenClass);
+            thirdStar.classList.remove(goldenClass);
+            fourthStar.classList.remove(goldenClass);
+            }
+        });
+        fifthStar.addEventListener('mouseover', function() {
+            if (!firstStar.classList.contains(goldenClass)) {
+            firstStar.classList.add(goldenClass);
+            secondStar.classList.add(goldenClass);
+            thirdStar.classList.add(goldenClass);
+            fourthStar.classList.add(goldenClass);
+            fifthStar.classList.add(goldenClass);
+            }
+        });
+        
+        fourthStar.addEventListener('mouseout', function () {
+            if (firstStar.classList.contains(goldenClass)) {
+            firstStar.classList.remove(goldenClass);
+            secondStar.classList.remove(goldenClass);
+            thirdStar.classList.remove(goldenClass);
+            fourthStar.classList.remove(goldenClass);
+            fifthStar.classList.remove(goldenClass);
+            }
+        });
+
+    
+        
+
     </script>
 </body>
 </html>
