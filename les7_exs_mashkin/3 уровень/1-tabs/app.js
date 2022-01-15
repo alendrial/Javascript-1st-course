@@ -12,6 +12,9 @@ const texts = {
     обработчик клика функцию clickHandler.
 */
 
+let text = document.getElementsByClassName('.text');
+console.log(text);
+
 
 /**
  * Обработчик клика по .nav-link
