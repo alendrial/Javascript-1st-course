@@ -75,17 +75,21 @@ const products = {
     ],
 };
 
-
+    let productsElement = document.querySelector(".products");
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach(function (button) {
+    button.addEventListener("click", clickHandler);
+});
 /**
  * Эта функция должна вызываться при клике по кнопкам.
  * @param {MouseEvent} event
  */
 function clickHandler(event) {
     //вам нужно очищать содержимое .products
-    
+    productsElement.innerHTML = "";
     //в showCategory надо передать строку с типом категории, тип берите
     //из атрибута data-type у кнопки, по которой кликнули.
-    
+    showCategory(event.target.dataset.type);
 }
 
 /**
@@ -96,9 +100,14 @@ function clickHandler(event) {
  * по которой кликнули.
  */
 function showCategory(category) {
-    
+    let categoryProducts = products[category];
+    console.log(categoryProducts);
+    let divMarkupProducts = "";
+    categoryProducts.forEach(function (product) {
+        divMarkupProducts += getProductMarkup(product);
+    });
+    productsElement.insertAdjacentHTML("afterbegin", divMarkupProducts);
 }
-
 /**
  * @param {Object} product объект из массива phones, tablets или tv.
  * @param {number} product.id id продукта
@@ -109,5 +118,10 @@ function showCategory(category) {
  * в верху этого файла.
  */
 function getProductMarkup(product) {
-
+    return `<div class="product">
+                <div>${product.name}</div>
+                <img src="${product.imageUrl}" alt="">
+                <div>${product.price}</div>
+                <a href="https://example.com/producs/${product.id}">Подробнее</a>
+            </div>`;
 }
