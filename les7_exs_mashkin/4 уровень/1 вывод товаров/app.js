@@ -90,7 +90,7 @@ function clickHandler(event) {
     //в showCategory надо передать строку с типом категории, тип берите
     //из атрибута data-type у кнопки, по которой кликнули.
     showCategory(event.target.dataset.type);
-}
+};
 
 /**
  * Функция берет товары (объекты) из соответствующего массива phones,
@@ -107,7 +107,7 @@ function showCategory(category) {
         divMarkupProducts += getProductMarkup(product);
     });
     productsElement.insertAdjacentHTML("afterbegin", divMarkupProducts);
-}
+};
 /**
  * @param {Object} product объект из массива phones, tablets или tv.
  * @param {number} product.id id продукта
@@ -124,4 +124,4 @@ function getProductMarkup(product) {
                 <div>${product.price}</div>
                 <a href="https://example.com/producs/${product.id}">Подробнее</a>
             </div>`;
-}
+};

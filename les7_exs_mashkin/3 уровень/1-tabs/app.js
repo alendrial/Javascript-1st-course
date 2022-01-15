@@ -59,8 +59,8 @@ function changeText(event) {
     }
     else  {
         textElement.textContent = texts.text3;
-    }
-}
+    };
+};
 
 // Можно и через switch, но с 3 значениями не стал заморачиваться.
     
