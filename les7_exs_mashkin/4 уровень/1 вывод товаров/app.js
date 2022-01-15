@@ -91,7 +91,8 @@ function clickHandler(event) {
     productsElement.innerHTML = "";
     //в showCategory надо передать строку с типом категории, тип берите
     //из атрибута data-type у кнопки, по которой кликнули.
-    showCategory(event.target.dataset.type);
+    let category = event.target.dataset.type;
+    showCategory(category);
 };
 
 /**
