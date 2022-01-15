@@ -12,9 +12,15 @@ const texts = {
     обработчик клика функцию clickHandler.
 */
 
-let text = document.getElementsByClassName('.text');
-console.log(text);
+let textElement = document.querySelector('.text');
+let navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(function(link) {
+    link.addEventListener('click', clickHandler);
+    
+});
 
+console.log(navLinks);
+console.log(navLinks.indexOf(textElement));
 
 /**
  * Обработчик клика по .nav-link
@@ -23,7 +29,8 @@ console.log(text);
 function clickHandler(event) {
     // здесь вызывайте changeText и changeActiveClass, и передавайте
     // им объект события.
-   
+   changeActiveClass(event);
+   changeText(event);
 }
 
 /**
@@ -32,6 +39,8 @@ function clickHandler(event) {
  * @param {MouseEvent} event 
  */
 function changeActiveClass(event) {
+    document.querySelector('.active').classList.remove('active');
+    event.target.classList.add('active');
     
 }
 
@@ -42,5 +51,17 @@ function changeActiveClass(event) {
  * @param {MouseEvent} event 
  */
 function changeText(event) {
-    
+    if (event.target.classList.contains('active') && event.target.textContent == 'Link 2') {
+        textElement.textContent = texts.text2;
+    }
+    else if (event.target.classList.contains('active') && event.target.textContent == 'Link 1') {
+        textElement.textContent = texts.text1;
+    }
+    else  {
+        textElement.textContent = texts.text3;
+    }
 }
+
+// Можно и через switch, но с 3 значениями не стал заморачиваться.
+    
+    
