@@ -77,6 +77,8 @@ const products = {
 
     let productsElement = document.querySelector(".products");
     let buttons = document.querySelectorAll("button");
+    console.log(productsElement);
+    console.log(buttons);
     buttons.forEach(function (button) {
     button.addEventListener("click", clickHandler);
 });
